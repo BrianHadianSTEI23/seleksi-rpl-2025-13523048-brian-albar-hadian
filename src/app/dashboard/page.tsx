@@ -250,7 +250,7 @@ export default function Dashboard() {
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">SiBansos Dashboard</h1>
+                <h1 className="text-xl font-bold text-gray-900">welfare.id Dashboard</h1>
                 <p className="text-xs text-gray-600">Monitoring Bantuan Sosial per Provinsi</p>
               </div>
             </div>

@@ -23,7 +23,7 @@ const NotFound = () => {
             <Shield className="w-8 h-8 text-white" />
           </div>
           <div className="flex items-center justify-center space-x-3 mb-4">
-            <h1 className="text-2xl font-bold text-gray-900">SiBansos</h1>
+            <h1 className="text-2xl font-bold text-gray-900">welfare.id</h1>
             <span className="text-gray-400">|</span>
             <span className="text-gray-600">Sistem Bantuan Sosial Transparan</span>
           </div>
@@ -94,7 +94,7 @@ const NotFound = () => {
                 Butuh bantuan? Hubungi tim support kami
               </p>
               <div className="flex flex-col sm:flex-row gap-2 justify-center text-sm">
-                <span className="text-gray-600">Email: support@sibansos.go.id</span>
+                <span className="text-gray-600">Email: support@welfare.id.go.id</span>
                 <span className="hidden sm:inline text-gray-400">|</span>
                 <span className="text-gray-600">Telepon: (021) 1234-5678</span>
               </div>
@@ -103,7 +103,7 @@ const NotFound = () => {
         </Card>
 
         <div className="mt-8 text-center text-xs text-gray-500">
-          <p>© 2024 SiBansos. Semua hak dilindungi undang-undang.</p>
+          <p>© 2024 welfare.id. Semua hak dilindungi undang-undang.</p>
         </div>
       </div>
     </div>

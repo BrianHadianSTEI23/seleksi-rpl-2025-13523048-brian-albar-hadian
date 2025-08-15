@@ -66,7 +66,7 @@ export default function Landing() {
                 <Shield className="w-6 h-6 text-white" />
               </div>
               <div>
-                <h1 className="text-xl font-bold text-gray-900">SiBansos</h1>
+                <h1 className="text-xl font-bold text-gray-900">welfare.id</h1>
                 <p className="text-xs text-gray-600">Sistem Bantuan Sosial Transparan</p>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function Landing() {
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-blue-600 to-purple-600">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-            Mengapa Memilih SiBansos?
+            Mengapa Memilih welfare.id?
           </h2>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto mb-12">
             Sistem yang dirancang untuk menciptakan transparansi dan akuntabilitas dalam penyaluran bantuan sosial
@@ -266,7 +266,7 @@ export default function Landing() {
                   <Shield className="w-6 h-6 text-white" />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold">SiBansos</h3>
+                  <h3 className="text-lg font-bold">welfare.id</h3>
                   <p className="text-gray-400 text-sm">Sistem Bantuan Sosial Transparan</p>
                 </div>
               </div>
@@ -294,7 +294,7 @@ export default function Landing() {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>© 2024 SiBansos. Semua hak dilindungi undang-undang.</p>
+            <p>© 2024 welfare.id. Semua hak dilindungi undang-undang.</p>
           </div>
         </div>
       </footer>

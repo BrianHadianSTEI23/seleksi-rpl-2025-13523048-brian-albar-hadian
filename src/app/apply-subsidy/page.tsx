@@ -456,12 +456,12 @@ export default function SubsidyApplication() {
               </CardHeader>
               <CardContent className="space-y-3">
                 <div>
-                  <h4 className="font-semibold text-blue-900">Hotline SiBansos</h4>
+                  <h4 className="font-semibold text-blue-900">Hotline welfare.id</h4>
                   <p className="text-blue-700">0800-1234-5678</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-blue-900">Email</h4>
-                  <p className="text-blue-700">bantuan@sibansos.go.id</p>
+                  <p className="text-blue-700">bantuan@welfare.id.go.id</p>
                 </div>
                 <div>
                   <h4 className="font-semibold text-blue-900">Jam Layanan</h4>
