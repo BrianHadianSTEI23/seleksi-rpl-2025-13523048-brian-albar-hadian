@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Link from "next/link"
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, TrendingUp, Users, LogOut } from "lucide-react";
 import IndonesiaMap from "@/components/IndonesiaMap";
+import welfareLogo from "../../../public/welfare.id-circle.png"
 
 // Indonesian provinces data with mock subsidy information
 const provincesData = [
@@ -246,9 +248,12 @@ export default function Dashboard() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center space-x-3">
-              <div className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl">
-                <Shield className="w-6 h-6 text-white" />
-              </div>
+                <Image
+                  src={welfareLogo}
+                  height={50}
+                  width={50}
+                  alt="welfare.id logo"
+                />
               <div>
                 <h1 className="text-xl font-bold text-gray-900">welfare.id Dashboard</h1>
                 <p className="text-xs text-gray-600">Monitoring Bantuan Sosial per Provinsi</p>
