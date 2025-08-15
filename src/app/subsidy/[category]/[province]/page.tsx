@@ -351,7 +351,7 @@ export default function SubsidyDetail() {
             </Card>
 
             {/* Quick Stats */}
-            <Card className="border-0 shadow-xl bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200">
+            <Card className ="shadow-xl bg-gradient-to-br from-purple-50 to-indigo-50 border-2 border-purple-200">
               <CardHeader>
                 <CardTitle className="flex items-center text-purple-800">
                   <TrendingUp className="w-5 h-5 mr-2" />
