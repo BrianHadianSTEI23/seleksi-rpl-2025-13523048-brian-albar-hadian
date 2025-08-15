@@ -80,7 +80,7 @@ export default function IndonesiaMap({
 
     const newPaths = (indonesiaGeoJSON as any).features.map((feature: any) => ({
       d: pathGenerator(feature) || "",
-      name: feature.properties.name,
+      name: feature.properties.Propinsi,
     }));
 
     setPaths(newPaths);

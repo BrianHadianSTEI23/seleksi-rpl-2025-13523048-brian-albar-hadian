@@ -1,7 +1,8 @@
 "use client"
 
 import { useState } from "react";
-import Link from "next/link";
+import Link from "next/link"
+import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, TrendingUp, Users, LogOut } from "lucide-react";
@@ -220,11 +221,15 @@ const formatRupiah = (amount: number) => {
 
 export default function Dashboard() {
   const [selectedProvince, setSelectedProvince] = useState<number | null>(null);
+  const router = useRouter();
 
   const handleProvinceClick = (provinceId: number) => {
     setSelectedProvince(provinceId === selectedProvince ? null : provinceId);
   };
 
+  const handleCategoryClick = (category: string, provinceName: string) => {
+    router.push(`/subsidy/${category}/${encodeURIComponent(provinceName)}`);
+  };
 
   const selectedProvinceData = selectedProvince 
     ? provincesData.find(p => p.id === selectedProvince) 
@@ -250,6 +255,16 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="flex items-center space-x-3">
+              <Link href="/complaint">
+                <Button variant="outline" className="border-blue-300 text-blue-600 hover:bg-blue-50">
+                  Ajukan Pengaduan
+                </Button>
+              </Link>
+              <Link href="/apply-subsidy">
+                <Button variant="outline" className="border-blue-300 text-blue-600 hover:bg-blue-50">
+                  Ajukan Subsidi
+                </Button>
+              </Link>
               <Link href="/auth/login">
                 <Button variant="ghost" className="text-gray-700 hover:text-gray-900">
                   <LogOut className="w-4 h-4 mr-2" />
@@ -291,7 +306,7 @@ export default function Dashboard() {
           <div className="lg:col-span-1">
             <div className="sticky top-24">
               {selectedProvinceData ? (
-                <Card className="border-0 shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-200">
+                <Card className="shadow-xl bg-gradient-to-br from-yellow-50 to-amber-50 border-2 border-yellow-200">
                   <CardHeader>
                     <CardTitle className="text-xl text-gray-900 flex items-center">
                       <TrendingUp className="w-5 h-5 mr-2" />
@@ -305,8 +320,11 @@ export default function Dashboard() {
                     <div className="bg-white/80 rounded-lg p-4 border border-yellow-200">
                       <div className="space-y-3">
                         {Object.entries(selectedProvinceData.subsidies).map(([key, subsidy]) => (
-                          <div key={key} className="flex items-center justify-between py-2 border-b border-gray-200 last:border-b-0">
-                            <div className="flex items-center">
+                          <div
+                            key={key}
+                            className="flex items-center justify-between py-2 border-b border-gray-200 last:border-b-0 cursor-pointer hover:bg-gray-50 rounded-lg px-2 transition-colors"
+                            onClick={() => handleCategoryClick(key, selectedProvinceData.name)}
+                          >                            <div className="flex items-center">
                               <span className="inline-flex items-center justify-center w-6 h-6 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs font-bold rounded-full mr-3">
                                 {key}
                               </span>
@@ -319,6 +337,7 @@ export default function Dashboard() {
                               <p className="font-bold text-green-600">
                                 {formatRupiah(subsidy.total)}
                               </p>
+                              <p className="text-xs text-gray-500">Klik untuk detail →</p>
                             </div>
                           </div>
                         ))}
